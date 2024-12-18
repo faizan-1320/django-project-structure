@@ -31,22 +31,15 @@ python -m venv venv
 
 ### Step 2: Activate the Virtual Environment
 For Linux/MacOS:
-bash
-Copy code
 source venv/bin/activate
+
 For Windows:
-bash
-Copy code
 venv\Scripts\activate
 
 ### Step 3: Install Django
-bash
-Copy code
 pip install django
 
 ### Step 4: Start a Django Project
-bash
-Copy code
 django-admin startproject config
 
 ### Step 5: Organize Project Structure
@@ -54,29 +47,25 @@ Create a folder named project inside the root directory.
 Create a folder named user inside the project folder.
 
 ### Step 6: Create a Django App
-bash
-Copy code
 django-admin startapp user project/user
 
 ### Step 7: Configure Settings
 Move the settings.py file from config/ to a new folder named settings/ inside config/.
 Rename settings.py to base.py.
+
 Create two new files:
 development.py for development settings.
 production.py for production settings.
 Import the base.py settings in both development.py and production.py.
 Running the Project
+
 Activate the virtual environment (if not already activated):
-bash
-Copy code
 source venv/bin/activate
+
 Apply migrations:
-bash
-Copy code
 python manage.py migrate
+
 Run the development server:
-bash
-Copy code
 python manage.py runserver
 
 ### Additional Notes
